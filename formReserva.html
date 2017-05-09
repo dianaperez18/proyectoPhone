@@ -22,16 +22,16 @@ function enviar() {
   async:true, 
   type: "POST", 
   dataType: "html", contentType: "application/x-www-form-urlencoded", 
-  url:"reservar.php", 
+  url:"https://nanis1122013.000webhostapp.com/phone/reservar.php", 
   data:"nombre="+nombre+"&apellido="+apellido+"&placa="+placa+"&cedula="+cedula, beforeSend:inicioEnvio, success:llegadaDatos, 
   timeout:4000, 
   error:problemas }); 
   return false; 
 } 
 
- function inicioEnvio(datos)
+ function inicioEnvio()
         {
-            $("#respuesta").text(datos);
+            $("#respuesta").text(se han enviado los datos);
         }
 
         function llegadaDatos(datos)
